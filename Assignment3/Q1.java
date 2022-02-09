@@ -1,13 +1,23 @@
 public class Q1{
 
     public static void main(String[] args) {
-        String str = "XYZXYZ";
+        String str = "abc";
+        System.out.println("String length = "+ stringlength(str));
+        System.out.println("String to lower case = " + stringLowerCase(str));
+        System.out.println("Reversed string = " + reverseString(str));
+        System.out.println("Is string palindrome? " +palindrome(str));
+        System.out.println("Duplicate chars in string");
         duplicateChars(str);
+        System.out.println("Is string valid? " + isValidString(str));
+        wordsAndVowels(str);
+
     }
 
     private static int stringlength(String str){
-        int i=0;int count=0;
-        while(i<str.length()) count++;
+        int count=0;
+        for(char ch: str.toCharArray()){
+            count++;
+        }
         return count;
     }
     private static String stringLowerCase(String str){
@@ -17,13 +27,12 @@ public class Q1{
             if(ch>='a' && ch<='z'){
                 newStr+=ch;
             }else{
-                newStr+=(char)(ch-('A'-'a'));
+                newStr+=(char)(ch+32);
             }
         }
-        // A to a
         return newStr;
     }
-    private static int[] wordsAndVowels(String str){
+    private static void wordsAndVowels(String str){
         int vowels=0;
         int words=0;
 
@@ -34,7 +43,7 @@ public class Q1{
             }
             if(ch==' ') words++;
         }
-        return new int[]{vowels,words+1};
+        System.out.println("Vowels = " + vowels + "  Words= "+(words+1));
     }
     private static String reverseString(String str){
         String newStr = "";
@@ -45,7 +54,7 @@ public class Q1{
     }
 
     private static boolean palindrome(String str){
-        int i=0,j=str.length();
+        int i=0,j=str.length()-1;
 
         while(i<j){
             if(str.charAt(i)!=str.charAt(j)){
