@@ -3,6 +3,7 @@ public class Q2 {
     public static void main(String[] args) {
         
         String str = "zcedoepsnqalf";
+        System.out.println(str);
         sortString(str);
 
     }
@@ -23,6 +24,5 @@ public class Q2 {
         for(char c:ch){
             System.out.print(c);
         }
-
     }
 }

@@ -1,7 +1,7 @@
 public class Q4 {
     
     public static void main(String[] args) {
-        int n = 5;
+        int n = 10;
         System.out.println(fibonnaci(n));
     }
     private static int fibonnaci(int n){

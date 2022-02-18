@@ -1,12 +1,12 @@
 public class Q1{
 
     public static void main(String[] args) {
-        String str = "abc";
+        String str = "abccdd";
         System.out.println("String length = "+ stringlength(str));
         System.out.println("String to lower case = " + stringLowerCase(str));
         System.out.println("Reversed string = " + reverseString(str));
         System.out.println("Is string palindrome? " +palindrome(str));
-        System.out.println("Duplicate chars in string");
+        System.out.print("Duplicate chars in string = ");
         duplicateChars(str);
         System.out.println("Is string valid? " + isValidString(str));
         wordsAndVowels(str);

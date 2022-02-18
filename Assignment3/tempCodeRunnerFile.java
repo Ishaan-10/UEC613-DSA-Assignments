@@ -1,12 +1,3 @@
-public class Q3 {
-    
-    public static void main(String[] args) {
-        int n =5;
-        int r=2;
-        System.out.println(factorial(5));
-
-    }
-
     private static int factorial(int n){
         if(n==1) return 1;
         return n*factorial(n-1);
@@ -16,4 +7,3 @@ public class Q3 {
         int denom = factorial(n-r)*factorial(r);
         return num/denom;
     }
-}
